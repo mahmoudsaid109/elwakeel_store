@@ -40,11 +40,13 @@ class _LoginScreenState extends State<LoginScreen> {
       setState(() {
         _isLoading = false;
       });
-      print('Username: ${_usernameController.text}');
-      print('Password: ${_passwordController.text}');
+      // print('Username: ${_usernameController.text}');
+      // print('Password: ${_passwordController.text}');
 
       _usernameController.clear();
       _passwordController.clear();
+      // ignore: use_build_context_synchronously
+      Navigator.pushNamed(context, '/home');
     }
   }
 
@@ -108,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(40),
         child: Image.asset(
-          'assets/logo.png', 
+          'assets/logo.png',
           width: 60,
           height: 60,
           fit: BoxFit.cover,

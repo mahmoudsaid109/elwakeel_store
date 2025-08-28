@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-
+      
       initialRoute: '/splash',
       onGenerateRoute: generateRoute,
     );
